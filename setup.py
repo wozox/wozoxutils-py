@@ -6,7 +6,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
 
 setup(
     name="wozoxutils",
-    version="0.2.1",
+    version="0.2.2",
     packages=find_packages(),
     install_requires=[],  # 添加依赖包
     author="illiten",
