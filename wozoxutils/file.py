@@ -22,7 +22,7 @@ def save_text(filename: str, content: str):
     :param content: Content to save
     """
     ensure_dir_exists(filename)
-    with open(filename, 'w', encoding='utf-8') as f:
+    with open(filename, 'w', encoding='utf-8', newline='\n') as f:
         f.write(content)
 
 
@@ -33,7 +33,7 @@ def load_text(filename: str) -> str:
     :param filename: File path
     :return: Content
     """
-    with open(filename, 'r', encoding='utf-8') as f:
+    with open(filename, 'r', encoding='utf-8', newline='\n') as f:
         content = f.read()
         return content
 
