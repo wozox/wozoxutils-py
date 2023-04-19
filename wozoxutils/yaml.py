@@ -11,7 +11,7 @@ def load_yaml(file_name: str):
     :return: Content
     """
     with open(file_name, 'r', encoding='utf-8') as f:
-        return yaml.load(f, Loader=yaml.FullLoader, allow_unicode=True)
+        return yaml.load(f, Loader=yaml.FullLoader)
 
 def save_yaml(file_name: str, content, sort_keys: bool = False):
     """
