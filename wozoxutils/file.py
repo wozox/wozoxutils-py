@@ -33,9 +33,8 @@ def load_text(filename: str) -> str:
     :param filename: File path
     :return: Content
     """
-    with open(filename, 'r', encoding='utf-8', newline='\n') as f:
-        content = f.read()
-        return content
+    with open(filename, 'r', encoding='utf-8') as f:
+        return f.read()
 
 
 def save_bytes(filename: str, content: bytes):
