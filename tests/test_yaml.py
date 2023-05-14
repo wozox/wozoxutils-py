@@ -1,6 +1,6 @@
 import unittest
 
-from wozoxutils.yaml import load_yaml, save_yaml
+from wozoxutils import load_yaml, save_yaml
 
 
 class TestYaml(unittest.TestCase):

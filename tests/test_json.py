@@ -1,6 +1,6 @@
 import unittest
 
-from wozoxutils.json import load_json, save_json
+from wozoxutils import load_json, save_json
 
 
 class TestJson(unittest.TestCase):

@@ -2,7 +2,7 @@
 import hashlib
 
 
-def calculate_md5_for_flle(file_path: str) -> str:
+def calculate_md5_for_file(file_path: str) -> str:
     """
     Calculate the MD5 hash of the contents of a file.
 
@@ -12,7 +12,7 @@ def calculate_md5_for_flle(file_path: str) -> str:
     md5_hash = hashlib.md5()
 
     with open(file_path, 'rb') as f:
-        for chunk in iter(lambda: f.read(4096), b''):
+        while chunk := f.read(1024*1024):  # 1MB
             md5_hash.update(chunk)
 
     return md5_hash.hexdigest()
@@ -29,7 +29,7 @@ def calculate_md5_for_files(file_list: list[str]) -> str:
 
     for file_path in file_list:
         with open(file_path, 'rb') as f:
-            for chunk in iter(lambda: f.read(4096), b''):
+            while chunk := f.read(1024*1024):  # 1MB
                 md5_hash.update(chunk)
 
     return md5_hash.hexdigest()

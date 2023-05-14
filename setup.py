@@ -6,7 +6,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
 
 setup(
     name="wozoxutils",
-    version="0.2.4",
+    version="0.2.5",
     packages=find_packages(),
     install_requires=[
         'pyyaml>=6.0',
