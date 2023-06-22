@@ -10,7 +10,7 @@ def ensure_dir_exists(path: str):
     """
     if not os.path.isdir(path):
         path = os.path.dirname(path)
-    if not os.path.exists(path):
+    if path != '' and not os.path.exists(path):
         os.makedirs(path)
 
 

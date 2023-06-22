@@ -1,3 +1,9 @@
+.DEFAULT_GOAL := all
+all: test build publish
+
+.PHONY: test
+test:
+	python -m unittest tests/test_*.py
 
 .PHONY: build
 build:
@@ -6,7 +12,3 @@ build:
 .PHONY: publish
 publish:
 	twine upload dist/*
-
-.PHONY: test
-test:
-	python -m unittest tests/test_*.py
